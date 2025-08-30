@@ -1,0 +1,46 @@
+{
+  "name": "bangla-golpo-gemini",
+  "version": "1.0.0",
+  "description": "Production-ready Bengali story generator using Gemini AI",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "cross-env NODE_ENV=production node server.js",
+    "dev": "cross-env NODE_ENV=development nodemon server.js",
+    "pm2:start": "pm2 start ecosystem.config.js --env production",
+    "pm2:dev": "pm2 start ecosystem.config.js --env development",
+    "pm2:stop": "pm2 stop bangla-golpo-api",
+    "pm2:restart": "pm2 restart bangla-golpo-api",
+    "pm2:logs": "pm2 logs bangla-golpo-api"
+  },
+  "keywords": [
+    "bengali",
+    "story",
+    "gemini",
+    "ai",
+    "production"
+  ],
+  "author": "Subhajit",
+  "license": "ISC",
+  "type": "module",
+  "dependencies": {
+    "axios": "^1.11.0",
+    "compression": "^1.7.4",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.18.2",
+    "express-rate-limit": "^6.10.0",
+    "express-validator": "^7.2.0",
+    "helmet": "^7.1.0",
+    "morgan": "^1.10.0",
+    "node-cache": "^5.1.2",
+    "path-to-regexp": "^6.2.1"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3",
+    "nodemon": "^3.1.4"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
